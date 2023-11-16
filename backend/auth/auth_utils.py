@@ -15,6 +15,7 @@ def get_authenticated_user_details(request_headers):
     user_object['auth_provider'] = raw_user_object['X-Ms-Client-Principal-Idp']
     user_object['auth_token'] = raw_user_object['X-Ms-Token-Aad-Id-Token']
     user_object['client_principal_b64'] = raw_user_object['X-Ms-Client-Principal']
-    user_object['aad_id_token'] = raw_user_object["X-Ms-Token-Aad-Id-Token"]
+    #user_object['aad_id_token'] = raw_user_object["X-Ms-Token-Aad-Id-Token"]
+    user_object['aad_id_token'] = "testuser"
 
     return user_object
